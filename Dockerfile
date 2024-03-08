@@ -19,7 +19,7 @@ RUN apt-get update && apt-get install -y \
     git \
     && rm -rf /var/lib/apt/lists/*
 
-RUN git clone -b docker --depth 1 https://gitee.com/bilisakura/streamlit4DDDEGPT.git .
+RUN git clone -b docker --depth 1 https://github.com/Bili-Sakura/streamlit4DDDEGPT.git .
 
 RUN pip install --no-cache-dir -r requirements.txt
 
