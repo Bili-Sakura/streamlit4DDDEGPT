@@ -9,7 +9,7 @@ chat_box = ChatBox()
 
 
 with st.sidebar:
-    st.subheader('start to chat using streamlit')
+    st.subheader('start to chat using streamlit!!!')
     streaming = st.checkbox('streaming', True)
     in_expander = st.checkbox('show messages in expander', True)
     show_history = st.checkbox('show history', False)
