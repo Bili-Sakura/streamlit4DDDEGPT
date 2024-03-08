@@ -3,7 +3,7 @@ version: '3.8'
 services:
   ddegpt: # local image
     # image: sakura/ddegpt:0308
-    build: Dockerfile.prod
+    build: .
     # build: Dockerfile.dev # for fev
     ports:
       - "8503:8503" # self-defined
