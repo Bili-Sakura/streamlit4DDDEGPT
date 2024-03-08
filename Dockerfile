@@ -8,6 +8,9 @@ FROM python:3.8
 # Set the working directory in the container to /myapp
 WORKDIR /myapp
 
+# # Remove existing files in the container at /myapp (if needed)
+RUN rm -rf /myapp/*
+
 # Install packages
 RUN apt-get update && apt-get install -y \
     build-essential \
@@ -16,12 +19,9 @@ RUN apt-get update && apt-get install -y \
     git \
     && rm -rf /var/lib/apt/lists/*
 
-RUN git clone -b docker --depth 1 https://github.com/streamlit/streamlit-example.git .
+RUN git clone -b docker --depth 1 https://github.com/Bili-Sakura/streamlit4DDDEGPT.git .
 
 RUN pip install --no-cache-dir -r requirements.txt
 
-EXPOSE 8503
-
 # Run streamlit when the container launches
-# We run conmand mannually!
-# CMD ["streamlit", "run", "app.py"]
+CMD ["streamlit", "run", "app.py"]
