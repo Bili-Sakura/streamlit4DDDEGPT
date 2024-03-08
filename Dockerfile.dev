@@ -1,0 +1,7 @@
+# # Set the working directory in the container to /app
+WORKDIR /myapp
+
+# # Remove existing files in the container at /app (if needed)
+RUN rm -rf /myapp/*
+
+RUN git clone -b docker --depth 1 https://github.com/streamlit/streamlit-example.git .
