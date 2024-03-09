@@ -2,24 +2,19 @@
 
 ## Quick Start
 
-**1. Initalizaiton**  
-```
-docker-compose up
-```
-
-**2. Update(Option)**  
-
-modify `docker-compose.yml`
-```yaml
-# docker-compose.yml
-version: '3.8'
-services:
-  ddegpt: 
-    build: Dockerfile.dev # for fev
-    ports:
-      - "8503:8503" # self-defined
-```
+**Install Desktop**  
 
 ```
-docker-compose up
+docker run -d -p 8501:8501 ddegpt:latest
 ```
+
+> Only spend time in first initilaztion. 
+
+## Development Note
+
+
+**Replace fake llm with true LLM class**  
+
+**Replace fake agent with true agent**
+
+**Add RAG logic into LLM class**
