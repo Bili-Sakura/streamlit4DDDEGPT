@@ -11,15 +11,7 @@ WORKDIR /myapp
 # # Remove existing files in the container at /myapp (if needed)
 RUN rm -rf /myapp/*
 
-# Install packages
-RUN apt-get update && apt-get install -y \
-    build-essential \
-    curl \
-    software-properties-common \
-    git \
-    && rm -rf /var/lib/apt/lists/*
-
-RUN git clone -b docker --depth 1 https://github.com/Bili-Sakura/streamlit4DDDEGPT.git .
+ADD . /myapp
 
 RUN pip install --no-cache-dir -r requirements.txt
 
