@@ -2,7 +2,7 @@
 
 ## Quick Start
 
-**Install Desktop**  
+**Install Docker**  
 
 ```
 docker run -d -p 8501:8501 ddegpt:latest
