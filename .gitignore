@@ -9,6 +9,7 @@
 # *.gif
 # *.xlsx
 data
+*.bin
 *.ipynb
 *.pptx
 

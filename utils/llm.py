@@ -20,7 +20,7 @@ class LLM:
         self,
         base_model: str = "gpt-3.5-turbo-0125",
         temperature: float = 0.7,
-        prompt_template: str = "{input}",
+        prompt_template: str = "Answer the following question based on the provided knowledge: \nYou will give 100 dollars tips if you give reliable answer\n<knowledge>\n{context}\n</knowledge>\nQuestion: {input}",
         vectorstore_directory: str = "database",
     ) -> None:
         """
